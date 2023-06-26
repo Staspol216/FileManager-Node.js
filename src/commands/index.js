@@ -11,3 +11,4 @@ export { compress } from "./compress.js";
 export { decompress } from "./decompress.js";
 export { hash } from "./hash.js";
 export { os } from "./os.js";
+export { exit } from "./exit.js";

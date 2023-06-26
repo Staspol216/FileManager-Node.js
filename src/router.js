@@ -15,6 +15,7 @@ const COMMANDS_LIST = {
     HASH: 'hash',
     COMPRESS: 'compress',
     DECOMPRESS: 'decompress',
+    EXIT: '.exit'
 }
 
 export class CommandRouter {
@@ -64,6 +65,9 @@ export class CommandRouter {
                 break;
             case COMMANDS_LIST.OS:
                 Operation.os(commandArgs);
+                break;
+            case COMMANDS_LIST.EXIT:
+                Operation.exit();
                 break;
             default:
                 stdout.write('Invalid input\n')

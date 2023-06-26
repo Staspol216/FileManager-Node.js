@@ -4,6 +4,7 @@ import * as readline from 'node:readline/promises';
 import { CommandRouter } from './router.js';
 
 const argPrefix = '--';
+export const rl = readline.createInterface({ input, output });
 
 const getParsedArgs = (args) => {
     const formattedArgs = [];
@@ -22,7 +23,6 @@ const initErrorHandler = () => {
 }
 
 const startApp = async () => {
-    const rl = readline.createInterface({ input, output });
     const { homedir } = userInfo();
     const args = process.argv.slice(2);
     const parsedArgs = getParsedArgs(args);
